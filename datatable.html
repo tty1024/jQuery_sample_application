@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.datatables.net/v/dt/dt-1.13.8/datatables.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/v/dt/dt-1.13.8/datatables.min.js"></script>
+</head>
+
+<body>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom px-5">
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-4">Datatable</span>
+        </a>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link active">Datatable</a></li>
+            <li class="nav-item"><a href="calendar.html" class="nav-link">Calendar</a></li>
+            <li class="nav-item"><a href="resizable.html" class="nav-link">Resizable Element</a></li>
+            <li class="nav-item"><a href="sortable.html" class="nav-link">Sortable List</a></li>
+        </ul>
+    </header>
+    <div class="mx-5">
+        <table class="table" id="sample_table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Emily Smith</td>
+                    <td>25</td>
+                    <td>9876</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Oliver Johnson</td>
+                    <td>28</td>
+                    <td>23456</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ava Williams</td>
+                    <td>32</td>
+                    <td>54321</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Ethan Brown</td>
+                    <td>27</td>
+                    <td>12345</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Isabella Jones</td>
+                    <td>29</td>
+                    <td>67890</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Mason Taylor</td>
+                    <td>31</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Sophia Davis</td>
+                    <td>26</td>
+                    <td>34567</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Logan Miller</td>
+                    <td>24</td>
+                    <td>87654</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Amelia Wilson</td>
+                    <td>30</td>
+                    <td>65432</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Lucas Anderson</td>
+                    <td>33</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Charlotte Martinez</td>
+                    <td>28</td>
+                    <td>23456</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Benjamin Thompson</td>
+                    <td>26</td>
+                    <td>54321</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Grace Garcia</td>
+                    <td>31</td>
+                    <td>12345</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Henry Robinson</td>
+                    <td>29</td>
+                    <td>67890</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Lily Clark</td>
+                    <td>27</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>William Rodriguez</td>
+                    <td>32</td>
+                    <td>34567</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Sophia Hernandez</td>
+                    <td>25</td>
+                    <td>87654</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>James Lee</td>
+                    <td>30</td>
+                    <td>65432</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Olivia Walker</td>
+                    <td>28</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Michael Hall</td>
+                    <td>26</td>
+                    <td>23456</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Emma Young</td>
+                    <td>29</td>
+                    <td>54321</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Aiden Hernandez</td>
+                    <td>31</td>
+                    <td>12345</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Sophia Lewis</td>
+                    <td>27</td>
+                    <td>67890</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Lucas Turner</td>
+                    <td>25</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Isabella Scott</td>
+                    <td>30</td>
+                    <td>34567</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Mason Adams</td>
+                    <td>28</td>
+                    <td>87654</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Amelia Green</td>
+                    <td>26</td>
+                    <td>65432</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Logan Baker</td>
+                    <td>31</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Emily King</td>
+                    <td>29</td>
+                    <td>23456</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Oliver Hill</td>
+                    <td>27</td>
+                    <td>54321</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>Ava Carter</td>
+                    <td>32</td>
+                    <td>12345</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>Ethan Phillips</td>
+                    <td>25</td>
+                    <td>67890</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Isabella Morris</td>
+                    <td>30</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>Mason Cook</td>
+                    <td>28</td>
+                    <td>34567</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>Sophia Rivera</td>
+                    <td>26</td>
+                    <td>87654</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>Lucas Ward</td>
+                    <td>31</td>
+                    <td>65432</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>Amelia Bell</td>
+                    <td>29</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>Logan Brooks</td>
+                    <td>27</td>
+                    <td>23456</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>Emily Cooper</td>
+                    <td>32</td>
+                    <td>54321</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>Oliver Reed</td>
+                    <td>25</td>
+                    <td>12345</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>Ava Bailey</td>
+                    <td>30</td>
+                    <td>67890</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>Ethan Wood</td>
+                    <td>28</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Isabella Richardson</td>
+                    <td>26</td>
+                    <td>34567</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Mason Cox</td>
+                    <td>31</td>
+                    <td>87654</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Sophia Howard</td>
+                    <td>29</td>
+                    <td>65432</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Lucas Ward</td>
+                    <td>27</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>Amelia Bell</td>
+                    <td>32</td>
+                    <td>23456</td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td>Logan Brooks</td>
+                    <td>25</td>
+                    <td>54321</td>
+                </tr>
+                <tr>
+                    <td>49</td>
+                    <td>Emily Cooper</td>
+                    <td>30</td>
+                    <td>12345</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>Oliver Reed</td>
+                    <td>28</td>
+                    <td>67890</td>
+                </tr>
+                <tr>
+                    <td>51</td>
+                    <td>Ava Bailey</td>
+                    <td>26</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>52</td>
+                    <td>Ethan Wood</td>
+                    <td>31</td>
+                    <td>34567</td>
+                </tr>
+                <tr>
+                    <td>53</td>
+                    <td>Isabella Richardson</td>
+                    <td>29</td>
+                    <td>87654</td>
+                </tr>
+                <tr>
+                    <td>54</td>
+                    <td>Mason Cox</td>
+                    <td>27</td>
+                    <td>65432</td>
+                </tr>
+                <tr>
+                    <td>55</td>
+                    <td>Sophia Howard</td>
+                    <td>32</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>56</td>
+                    <td>Lucas Ward</td>
+                    <td>25</td>
+                    <td>23456</td>
+                </tr>
+                <tr>
+                    <td>57</td>
+                    <td>Amelia Bell</td>
+                    <td>30</td>
+                    <td>54321</td>
+                </tr>
+                <tr>
+                    <td>58</td>
+                    <td>Logan Brooks</td>
+                    <td>28</td>
+                    <td>12345</td>
+                </tr>
+                <tr>
+                    <td>59</td>
+                    <td>Emily Cooper</td>
+                    <td>26</td>
+                    <td>67890</td>
+                </tr>
+                <tr>
+                    <td>60</td>
+                    <td>Oliver Reed</td>
+                    <td>31</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>61</td>
+                    <td>Ava Bailey</td>
+                    <td>29</td>
+                    <td>34567</td>
+                </tr>
+                <tr>
+                    <td>62</td>
+                    <td>Ethan Wood</td>
+                    <td>27</td>
+                    <td>87654</td>
+                </tr>
+                <tr>
+                    <td>63</td>
+                    <td>Isabella Richardson</td>
+                    <td>32</td>
+                    <td>65432</td>
+                </tr>
+                <tr>
+                    <td>64</td>
+                    <td>Mason Cox</td>
+                    <td>25</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>65</td>
+                    <td>Sophia Howard</td>
+                    <td>30</td>
+                    <td>23456</td>
+                </tr>
+                <tr>
+                    <td>66</td>
+                    <td>Lucas Ward</td>
+                    <td>28</td>
+                    <td>54321</td>
+                </tr>
+                <tr>
+                    <td>67</td>
+                    <td>Amelia Bell</td>
+                    <td>26</td>
+                    <td>12345</td>
+                </tr>
+                <tr>
+                    <td>68</td>
+                    <td>Logan Brooks</td>
+                    <td>31</td>
+                    <td>67890</td>
+                </tr>
+                <tr>
+                    <td>69</td>
+                    <td>Emily Cooper</td>
+                    <td>29</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>70</td>
+                    <td>Oliver Reed</td>
+                    <td>27</td>
+                    <td>34567</td>
+                </tr>
+                <tr>
+                    <td>71</td>
+                    <td>Ava Bailey</td>
+                    <td>32</td>
+                    <td>87654</td>
+                </tr>
+                <tr>
+                    <td>72</td>
+                    <td>Ethan Wood</td>
+                    <td>25</td>
+                    <td>65432</td>
+                </tr>
+                <tr>
+                    <td>73</td>
+                    <td>Isabella Richardson</td>
+                    <td>30</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>74</td>
+                    <td>Mason Cox</td>
+                    <td>28</td>
+                    <td>23456</td>
+                </tr>
+                <tr>
+                    <td>75</td>
+                    <td>Sophia Howard</td>
+                    <td>26</td>
+                    <td>54321</td>
+                </tr>
+                <tr>
+                    <td>76</td>
+                    <td>Lucas Ward</td>
+                    <td>31</td>
+                    <td>12345</td>
+                </tr>
+                <tr>
+                    <td>77</td>
+                    <td>Amelia Bell</td>
+                    <td>29</td>
+                    <td>67890</td>
+                </tr>
+                <tr>
+                    <td>78</td>
+                    <td>Logan Brooks</td>
+                    <td>27</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>79</td>
+                    <td>Emily Cooper</td>
+                    <td>32</td>
+                    <td>34567</td>
+                </tr>
+                <tr>
+                    <td>80</td>
+                    <td>Oliver Reed</td>
+                    <td>25</td>
+                    <td>87654</td>
+                </tr>
+                <tr>
+                    <td>81</td>
+                    <td>Ava Bailey</td>
+                    <td>30</td>
+                    <td>65432</td>
+                </tr>
+                <tr>
+                    <td>82</td>
+                    <td>Ethan Wood</td>
+                    <td>28</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>83</td>
+                    <td>Isabella Richardson</td>
+                    <td>26</td>
+                    <td>23456</td>
+                </tr>
+                <tr>
+                    <td>84</td>
+                    <td>Mason Cox</td>
+                    <td>31</td>
+                    <td>54321</td>
+                </tr>
+                <tr>
+                    <td>85</td>
+                    <td>Sophia Howard</td>
+                    <td>29</td>
+                    <td>12345</td>
+                </tr>
+                <tr>
+                    <td>86</td>
+                    <td>Lucas Ward</td>
+                    <td>27</td>
+                    <td>67890</td>
+                </tr>
+                <tr>
+                    <td>87</td>
+                    <td>Amelia Bell</td>
+                    <td>32</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>88</td>
+                    <td>Logan Brooks</td>
+                    <td>25</td>
+                    <td>34567</td>
+                </tr>
+                <tr>
+                    <td>89</td>
+                    <td>Emily Cooper</td>
+                    <td>30</td>
+                    <td>87654</td>
+                </tr>
+                <tr>
+                    <td>90</td>
+                    <td>Oliver Reed</td>
+                    <td>28</td>
+                    <td>65432</td>
+                </tr>
+                <tr>
+                    <td>91</td>
+                    <td>Ava Bailey</td>
+                    <td>26</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>92</td>
+                    <td>Ethan Wood</td>
+                    <td>31</td>
+                    <td>23456</td>
+                </tr>
+                <tr>
+                    <td>93</td>
+                    <td>Isabella Richardson</td>
+                    <td>29</td>
+                    <td>54321</td>
+                </tr>
+                <tr>
+                    <td>94</td>
+                    <td>Mason Cox</td>
+                    <td>27</td>
+                    <td>12345</td>
+                </tr>
+                <tr>
+                    <td>95</td>
+                    <td>Sophia Howard</td>
+                    <td>32</td>
+                    <td>67890</td>
+                </tr>
+                <tr>
+                    <td>96</td>
+                    <td>Lucas Ward</td>
+                    <td>25</td>
+                    <td>98765</td>
+                </tr>
+                <tr>
+                    <td>97</td>
+                    <td>Amelia Bell</td>
+                    <td>30</td>
+                    <td>34567</td>
+                </tr>
+                <tr>
+                    <td>98</td>
+                    <td>Logan Brooks</td>
+                    <td>28</td>
+                    <td>87654</td>
+                </tr>
+                <tr>
+                    <td>99</td>
+                    <td>Emily Cooper</td>
+                    <td>26</td>
+                    <td>65432</td>
+                </tr>
+                <tr>
+                    <td>100</td>
+                    <td>Oliver Reed</td>
+                    <td>31</td>
+                    <td>98765</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            console.log('ready');
+            $('#sample_table').DataTable();
+        });
+    </script>
+</body>
+
+</html>
